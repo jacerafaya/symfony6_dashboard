@@ -1,0 +1,12 @@
+{% extends 'base.article.html.twig' %}
+{% block title %}Lien article{% endblock %}
+{% block body %}
+<div class="mx-auto">
+<h1>{{ article.titre }}</h1>
+<h2>{{ article.categorie }}</h2>
+<p>{{ article.contenu|raw }}</p>
+<img src="{{ article.image }}">
+<br>
+<a href="{{ path('app_article') }}" class="btn btn-sm btn-primary">Retour aux articles</a>
+</div>
+{% endblock %}
